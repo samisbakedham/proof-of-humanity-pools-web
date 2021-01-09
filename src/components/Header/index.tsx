@@ -301,7 +301,7 @@ export default function Header() {
                     </TYPE.white>
                   </HideSmall>
                 )}
-                HOUR
+                UBI
               </UNIAmount>
               <CardNoise />
             </UNIWrapper>

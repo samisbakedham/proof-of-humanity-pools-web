@@ -140,8 +140,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
               ? stakingInfo.active
                 ? `${stakingInfo.totalRewardRate
                     ?.multiply(BIG_INT_SECONDS_IN_WEEK)
-                    ?.toFixed(0, { groupSeparator: ',' })} HOUR / week`
-                : '0 HOUR / week'
+                    ?.toFixed(0, { groupSeparator: ',' })} UBI / week`
+                : '0 UBI / week'
               : '-'}
           </TYPE.white>
         </RowBetween>
@@ -163,8 +163,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
                 ? stakingInfo.active
                   ? `${stakingInfo.rewardRate
                       ?.multiply(BIG_INT_SECONDS_IN_WEEK)
-                      ?.toSignificant(4, { groupSeparator: ',' })} HOUR / week`
-                  : '0 HOUR / week'
+                      ?.toSignificant(4, { groupSeparator: ',' })} UBI / week`
+                  : '0 UBI / week'
                 : '-'}
             </TYPE.black>
           </BottomSection>

@@ -1,6 +1,6 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, WETH, Pair } from '@uniswap/sdk'
 import { useMemo } from 'react'
-import { UNI, HOUR } from '../../constants'
+import { UNI, UBI } from '../../constants'
 import { STAKING_REWARDS_INTERFACE } from '../../constants/abis/staking-rewards'
 import { useActiveWeb3React } from '../../hooks'
 import { NEVER_RELOAD, useMultipleContractSingleData } from '../multicall/hooks'
@@ -12,6 +12,7 @@ export const STAKING_GENESIS = 1600387200
 export const REWARDS_DURATION_DAYS = 60
 
 // TODO add staking rewards addresses here
+// Kovan Factory: https://kovan.etherscan.io/address/0x29665caa2af25b2507c1d32f7fabaa744e8b0fe3
 export const STAKING_REWARDS_INFO: {
   [chainId in ChainId]?: {
     tokens: [Token, Token]
@@ -20,8 +21,8 @@ export const STAKING_REWARDS_INFO: {
 } = {
   [ChainId.KOVAN]: [
     {
-      tokens: [HOUR[ChainId.KOVAN], WETH[ChainId.KOVAN]],
-      stakingRewardAddress: '0x4eafcC86025907080324e90AA7036e46ACc7B5BA'
+      tokens: [UBI[ChainId.KOVAN], WETH[ChainId.KOVAN]],
+      stakingRewardAddress: '0xb296e779c191e55aAA80576B79Db212E2B19e0E3'
     }
   ]
 }
