@@ -1,14 +1,13 @@
 import React, { useCallback, useState } from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 import { JSBI, TokenAmount, ETHER } from '@uniswap/sdk'
 import { RouteComponentProps } from 'react-router-dom'
 import DoubleCurrencyLogo from '../../components/DoubleLogo'
 import { useCurrency } from '../../hooks/Tokens'
 import { useWalletModalToggle } from '../../state/application/hooks'
-import { TYPE } from '../../theme'
+import { TYPE, ExternalLink } from '../../theme'
 
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
@@ -206,8 +205,9 @@ export default function Manage({
                 padding="8px"
                 borderRadius="8px"
                 width={'fit-content'}
-                as={Link}
-                to={`/add/${currencyA && currencyId(currencyA)}/${currencyB && currencyId(currencyB)}`}
+                as={ExternalLink}
+                href={`https://app.uniswap.org/#/add/${currencyA && currencyId(currencyA)}/${currencyB &&
+                  currencyId(currencyB)}`}
               >
                 {`Add ${currencyA?.symbol}-${currencyB?.symbol} liquidity`}
               </ButtonPrimary>
