@@ -28,7 +28,7 @@ export const STAKING_REWARDS_INFO: {
   [ChainId.MAINNET]: [
     {
       tokens: [UBI[ChainId.MAINNET], WETH[ChainId.MAINNET]],
-      stakingRewardAddress: '0xa27Bfea336Bc7058fF1297eEfF2732389F8b208f'
+      stakingRewardAddress: '0xf9ae19cf447b3560afc407d9aac9e2007d4efe43'
     }
   ]
 }
