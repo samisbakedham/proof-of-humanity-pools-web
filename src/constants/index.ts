@@ -28,16 +28,18 @@ export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
 
 export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 
-const UBI_ADDRESS = '0xDdAdE19B13833d1bF52c1fe1352d41A8DD9fE8C9'
+const UBI_ADDRESS_KOVAN = '0xDdAdE19B13833d1bF52c1fe1352d41A8DD9fE8C9'
+const UBI_ADDRESS_MAINNET = '0xDd1Ad9A21Ce722C151A836373baBe42c868cE9a4'
 export const UNI: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UBI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UBI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UBI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UBI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UBI_ADDRESS, 18, 'UNI', 'Uniswap')
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UBI_ADDRESS_MAINNET, 18, 'UNI', 'Uniswap'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UBI_ADDRESS_MAINNET, 18, 'UNI', 'Uniswap'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UBI_ADDRESS_MAINNET, 18, 'UNI', 'Uniswap'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UBI_ADDRESS_MAINNET, 18, 'UNI', 'Uniswap'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UBI_ADDRESS_KOVAN, 18, 'UNI', 'Uniswap')
 }
 export const UBI = {
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UBI_ADDRESS, 18, 'UBI', 'UBI')
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UBI_ADDRESS_KOVAN, 18, 'UBI', 'UBI'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UBI_ADDRESS_MAINNET, 18, 'UBI', 'UBI')
 }
 export const DAI = {
   [ChainId.MAINNET]: new Token(
@@ -51,7 +53,7 @@ export const DAI = {
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
-  [UBI_ADDRESS]: 'UBI',
+  [UBI_ADDRESS_MAINNET]: 'UBI',
   [GOVERNANCE_ADDRESS]: 'Governance',
   [TIMELOCK_ADDRESS]: 'Timelock'
 }

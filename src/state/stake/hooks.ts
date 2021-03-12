@@ -7,7 +7,7 @@ import { NEVER_RELOAD, useMultipleContractSingleData } from '../multicall/hooks'
 import { tryParseAmount } from '../swap/hooks'
 import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 
-export const STAKING_GENESIS = 1600387200
+export const STAKING_GENESIS = 1615564800
 
 export const REWARDS_DURATION_DAYS = 365
 
@@ -23,6 +23,12 @@ export const STAKING_REWARDS_INFO: {
     {
       tokens: [UBI[ChainId.KOVAN], WETH[ChainId.KOVAN]],
       stakingRewardAddress: '0xb296e779c191e55aAA80576B79Db212E2B19e0E3'
+    }
+  ],
+  [ChainId.MAINNET]: [
+    {
+      tokens: [UBI[ChainId.MAINNET], WETH[ChainId.MAINNET]],
+      stakingRewardAddress: '0xa27Bfea336Bc7058fF1297eEfF2732389F8b208f'
     }
   ]
 }
