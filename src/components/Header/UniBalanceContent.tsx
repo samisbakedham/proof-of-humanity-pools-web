@@ -9,7 +9,7 @@ import { useMerkleDistributorContract } from '../../hooks/useContract'
 import useCurrentBlockTimestamp from '../../hooks/useCurrentBlockTimestamp'
 import { useTotalUniEarned } from '../../state/stake/hooks'
 import { useAggregateUniBalance, useTokenBalance } from '../../state/wallet/hooks'
-import { ExternalLink, StyledInternalLink, TYPE } from '../../theme'
+import { ExternalLink, TYPE } from '../../theme'
 import { computeUniCirculation } from '../../utils/computeUniCirculation'
 import useUSDCPrice from '../../utils/useUSDCPrice'
 import { AutoColumn } from '../Column'
@@ -86,14 +86,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
                 </RowBetween>
                 <RowBetween>
                   <TYPE.white color="white">Unclaimed:</TYPE.white>
-                  <TYPE.white color="white">
-                    {uniToClaim?.toFixed(4, { groupSeparator: ',' })}{' '}
-                    {uniToClaim && uniToClaim.greaterThan('0') && (
-                      <StyledInternalLink onClick={() => setShowUniBalanceModal(false)} to="/uni">
-                        (claim)
-                      </StyledInternalLink>
-                    )}
-                  </TYPE.white>
+                  <TYPE.white color="white">{uniToClaim?.toFixed(4, { groupSeparator: ',' })} </TYPE.white>
                 </RowBetween>
               </AutoColumn>
             </CardSection>
