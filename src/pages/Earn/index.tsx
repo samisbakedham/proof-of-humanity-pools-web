@@ -69,7 +69,12 @@ export default function Earn() {
                   Deposit your Liquidity Provider tokens to receive different rewards.
                 </TYPE.white>
               </RowBetween>{' '}
-              <ExternalLink style={{ color: 'white', textDecoration: 'underline' }} href="/" target="_blank">
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://blog.kleros.io/introducing-ubi-universal-basic-income-for-humans/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <TYPE.white fontSize={14}>Read more about the pools.</TYPE.white>
               </ExternalLink>
             </AutoColumn>
