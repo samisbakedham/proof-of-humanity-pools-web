@@ -206,7 +206,7 @@ export default function Manage({
                 borderRadius="8px"
                 width={'fit-content'}
                 as={ExternalLink}
-                href={`https://app.uniswap.org/#/add/${currencyA && currencyId(currencyA)}/${currencyB &&
+                href={`https://app.uniswap.org/#/add/v2/${currencyA && currencyId(currencyA)}/${currencyB &&
                   currencyId(currencyB)}`}
               >
                 {`Add ${currencyA?.symbol}-${currencyB?.symbol} liquidity`}

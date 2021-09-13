@@ -438,9 +438,9 @@ export default function RemoveLiquidity({
   const handleSelectCurrencyA = useCallback(
     (currency: Currency) => {
       if (currencyIdB && currencyId(currency) === currencyIdB) {
-        history.push(`/remove/${currencyId(currency)}/${currencyIdA}`)
+        history.push(`/remove/v2/${currencyId(currency)}/${currencyIdA}`)
       } else {
-        history.push(`/remove/${currencyId(currency)}/${currencyIdB}`)
+        history.push(`/remove/v2/${currencyId(currency)}/${currencyIdB}`)
       }
     },
     [currencyIdA, currencyIdB, history]
@@ -448,9 +448,9 @@ export default function RemoveLiquidity({
   const handleSelectCurrencyB = useCallback(
     (currency: Currency) => {
       if (currencyIdA && currencyId(currency) === currencyIdA) {
-        history.push(`/remove/${currencyIdB}/${currencyId(currency)}`)
+        history.push(`/remove/v2/${currencyIdB}/${currencyId(currency)}`)
       } else {
-        history.push(`/remove/${currencyIdA}/${currencyId(currency)}`)
+        history.push(`/remove/v2/${currencyIdA}/${currencyId(currency)}`)
       }
     },
     [currencyIdA, currencyIdB, history]
@@ -564,7 +564,7 @@ export default function RemoveLiquidity({
                       <RowBetween style={{ justifyContent: 'flex-end' }}>
                         {oneCurrencyIsETH ? (
                           <StyledInternalLink
-                            to={`/remove/${currencyA === ETHER ? WETH[chainId].address : currencyIdA}/${
+                            to={`/remove/v2/${currencyA === ETHER ? WETH[chainId].address : currencyIdA}/${
                               currencyB === ETHER ? WETH[chainId].address : currencyIdB
                             }`}
                           >
@@ -572,7 +572,7 @@ export default function RemoveLiquidity({
                           </StyledInternalLink>
                         ) : oneCurrencyIsWETH ? (
                           <StyledInternalLink
-                            to={`/remove/${
+                            to={`/remove/v2/${
                               currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'ETH' : currencyIdA
                             }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'ETH' : currencyIdB}`}
                           >
